@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: linear-gradient(to right, #f60d54, #f5f5dc);
+  animation: gradient 15s ease infinite;
+  width: 100%;
+  border-bottom: 4px solid brown;
+}
+
+nav ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Display items in a row */
+}
+
+nav ul li {
+  margin: 0 10px; /* Add some margin between items */
+}
+
+nav a {
+  text-decoration: none; /* Remove underlines */
+  color: brown; /* Default text color */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Add a transition effect when the text color and border-bottom changes */
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+/* Add a hover effect */
+nav a:hover {
+  color: #ff0066; /* Change the text color to pink on hover */
+  border-bottom: 2px solid #ff0066; /* Add a pink border-bottom on hover */
+}
+
+/* Add an active effect */
+nav a:active {
+  color: #00cc99; /* Change the text color to light green on active */
+  border-bottom: 2px solid #00cc99; /* Add a light green border-bottom on active */
+}
+
+form {
+  width: 300px;
+  margin: 7% auto;
+  text-align: center;
+}
+.animated-background {
+  background: linear-gradient(to right, #f60d54, #f5f5dc);
+  animation: gradient 15s ease infinite;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  flex-direction: column;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Input styling */
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  animation: shake 0.5s;
+}
+
+/* Animation for invalid input */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* Invalid input styling */
+input:invalid {
+  border: 2px solid red;
+}
+
+.animated-submit-button {
+  background-color: #9d1288; /* Green background */
+  color: white; /* White text */
+  padding: 16px 32px; /* Some padding */
+  font-size: 16px; /* Text size */
+  border: none; /* Remove border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add a transition effect when the background color and transform changes */
+  border-radius: 10%;
+  margin-top: 10px;
+}
+
+/* Add a hover effect */
+.animated-submit-button:hover {
+  background-color: #bd44d0;
+  transform: scale(1.1);
+}
+
+/* Add a active effect */
+.animated-submit-button:active {
+  background-color: #3e8e41;
+  transform: scale(0.9);
+}
+
+/* Add a text transition effect */
+.animated-heading {
+  color: rgb(152, 15, 15); /* Default text color */
+  text-align: center; /* Center the text */
+  transition: color 0.5s ease; /* Add a transition effect when the text color changes */
+}
+
+/* Add a hover effect */
+.animated-heading:hover {
+  color: #ff0000; /* Change the text color to pink on hover */
+  text-shadow: 0 0 10px #ff0066; /* Add a pink text shadow on hover */
+}
+
+/* Add an active effect */
+.animated-heading:active {
+  color: #00cc99; /* Change the text color to light green on active */
+}
+
+.adminHeading {
+  font-size: 2.5em;
+  color: #ff0000;
+  text-decoration: underline;
+}

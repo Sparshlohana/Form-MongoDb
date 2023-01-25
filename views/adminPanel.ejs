@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/admin.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="admin-panel">
+    <div class="admin-panel-header">
+      <h1>Admin Panel</h1>
+      <div class="admin-panel-header-right">
+        <a href="#notifications">
+          <i class="fas fa-bell"></i>
+          <span class="notification-count">5</span>
+        </a>
+        <a href="#logout">
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </div>
+    </div>
+    <div class="admin-panel-nav">
+      <a href="#users">Users</a>
+      <a href="#settings">Settings</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#billing">Billing</a>
+    </div>
+    <div class="admin-panel-content">
+      <h2>Welcome to the Admin Panel</h2>
+      <p>
+        Use the navigation above to manage users, settings, analytics and
+        billing.
+      </p>
+      <div id="users" class="admin-panel-section">
+        <h3>User Management</h3>
+        <div class="user-search-container">
+          <input type="text" placeholder="Search for users..." />
+          <button>Search</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% data.forEach(element=> {%>
+              <tr>
+
+                <td>
+                  <%= element.name %>
+                </td>
+                <td>
+                  <%= element.email %>
+                </td>
+
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <form action="/admin/delete" method="post">
+                    <input type="hidden" />
+                    <button class="delete-btn" name="email" type="submit" value="<%=element.email %>">Delete</button>
+                  </form>
+                </td>
+              </tr>
+              <% });%>
+                <!-- <tr>
+              <td>Jane Smith</td>
+              <td>janesmith@example.com</td>
+              <td>Editor</td>
+              <td>
+                <button class=" edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+              </tr> -->
+          </tbody>
+        </table>
+      </div>
+      <!-- <div id="settings" class="admin-panel-section">
+          <h3>Settings</h3>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" required />
+            <button type="submit">Save Changes</button>
+          </form>
+        </div> -->
+    </div>
+  </div>
+</body>
+
+</html>

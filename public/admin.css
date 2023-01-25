@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.14.0/css/all.css");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.admin-panel {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.admin-panel-header {
+  background-color: #f2f2f2;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-panel-header h1 {
+  margin: 0;
+}
+
+.admin-panel-header-right a {
+  margin-left: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.admin-panel-header-right a:hover {
+  color: #0077ff;
+}
+
+.admin-panel-header-right .notification-count {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.admin-panel-nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.admin-panel-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.admin-panel-nav a:hover {
+  color: #0077ff;
+  font-weight: bold;
+}
+
+.admin-panel-content {
+  padding: 20px;
+}
+.user-search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-search-container input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.user-search-container button {
+  background-color: #0077ff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.user-search-container button:hover {
+  background-color: #0066cc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+table .edit-btn,
+table .delete-btn {
+  background-color: #0077ff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+table .edit-btn:hover,
+table .delete-btn:hover {
+  background-color: #0066cc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+form input:invalid {
+  border-color: #ff0000;
+}
+
+form button[type="submit"] {
+  background-color: #0077ff;
+  color: #fff;
+  /* padding: 10px 15px; */
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 33%;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0066cc;
+}
+
+/* same as before */
+
+/* additional styles for responsive design */
+
+@media only screen and (max-width: 600px) {
+  .admin-panel-nav {
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .admin-panel-nav a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
