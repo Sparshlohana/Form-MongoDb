@@ -35,7 +35,7 @@ const login = async (req, res) => {
 
         if (checkPassword) {
             let payload = {
-                userID: isExists._id
+                userId: isExists._id
             }
             try {
                 const token = await createToken(payload);

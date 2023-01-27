@@ -12,14 +12,12 @@ const createToken = async (payload) => {
 
 const verifyToken = async (req, res, next) => {
     try {
-        const token = req.cookies.auth;
+        let token = req.cookies.auth || req.query.token;
         const verify = jwt.verify(token, "ThisIsYourPrivateKey");
 
-        if (verify?.userID) {
-            res.locals.userID = verify?.userID;
-
+        if (verify?.userId) {
+            res.locals.userId = verify?.userId;
         }
-        console.log(verify);
         next();
     } catch (error) {
         res.redirect("/user/login");

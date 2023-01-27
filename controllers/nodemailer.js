@@ -10,7 +10,7 @@ const sendMail = async (req, res) => {
             user: "sparsh.lohana@gmail.com",
             pass: "dkjpidkyfvovrjmx"
         }
-    })
+    });
 
     const mailOptions = {
         from: "sparsh.lohana@gmail.com",
