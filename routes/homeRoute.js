@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/home', sendMail)
+
 router.get('/home', verifyToken, async (req, res) => {
     const id = res.locals?.userID;
     const dbData = await User.findById({ _id: id })
